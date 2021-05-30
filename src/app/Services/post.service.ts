@@ -9,8 +9,8 @@ import { Post } from '../Models/post.model';
 })
 export class PostService {
 
-  apiURL = "http://localhost:8080/api/post/";
-  //apiURL = "https://colval-network.herokuapp.com/api/post/"
+  //apiURL = "http://localhost:8080/api/post/";
+  apiURL = "https://colval-network.herokuapp.com/api/post/"
   header = new HttpHeaders({'Content-Type' : 'application/json; charset=utf-8'});
 
   constructor(private http: HttpClient) { }

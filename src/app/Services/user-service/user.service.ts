@@ -9,8 +9,8 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class UserService {
 
-  apiURL = "http://localhost:8080/api/users/";
-  //apiURL = "https://colval-network.herokuapp.com/api/users/"
+  //apiURL = "http://localhost:8080/api/users/";
+  apiURL = "https://colval-network.herokuapp.com/api/users/"
   header = new HttpHeaders({'Content-Type' : 'application/json; charset=utf-8'});
 
   constructor(private http: HttpClient) { }
