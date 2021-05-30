@@ -1,0 +1,25 @@
+<div class="background">
+<div class="AccountPannel" fxFlex fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
+  <div class="LogInPannel" fxLayout="column" fxLayoutGap="25px">
+    <img src="../../../assets/Logo.png" class="Logo">
+    <input type="text" placeholder="Username" class="LoginInputs" [(ngModel)]="username" (keyup.enter)="LogIn()">
+    <input type="password" placeholder="Password" class="LoginInputs" [(ngModel)]="password" (keyup.enter)="LogIn()">
+    <a href="" class="ForgotPassword">Forgot Password ?</a>
+    <button mat-raised-button class="LogInButton" (click)="LogIn()">Log In</button>
+  </div>
+
+  <div class="NewAccountPannel" fxLayout="row" fxLayoutGap="15px">
+    <a>Don't have an account yet ?</a>
+    <button mat-raised-button (click)="createAccount()">Sign Up</button>
+  </div>
+
+  <div class="DownloadButtonPannel">
+    <a>Available Soon!</a>
+
+    <div fxLayout="row" fxLayoutGap="10px">
+      <img src="../../../assets/Icons/appStoreDownload.png">
+      <img src="../../../assets/Icons/googlePlayStoreDownload.png">
+    </div>
+  </div>
+</div>
+

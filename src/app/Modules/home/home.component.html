@@ -1,0 +1,72 @@
+<div class="background">
+  <div class="Menu" fxFlex="15">
+      <img src="../../../assets/Logo.png" class="Logo">
+
+      <div class="PagesLinks" fxLayout="column" fxLayoutGap="25px">
+
+        <div class="HomeLink">
+          <img src="../../../assets/Icons/home.png">
+          <a href="/home">Home</a>
+        </div>
+        
+        <div class="Notification">
+          <img src="../../../assets/Icons/notification.png">
+          <a>Notification</a>
+        </div>
+
+        <div class="Messages">
+          <img src="../../../assets/Icons/mail.png">
+          <a>Messages</a>
+        </div>
+
+        <div class="Favorites">
+          <img src="../../../assets/Icons/favorite.png">
+          <a>Favorites</a>
+        </div>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <div class="Profile">
+          <img src="../../../assets/Icons/user.png">
+          <a>Profile</a>
+        </div>
+
+        <div class="Settings">
+          <img src="../../../assets/Icons/settings.png">
+          <a>Settings</a>
+        </div>
+
+        <div class="Logout">
+          <img src="../../../assets/Icons/power.png">
+          <a href="">Logout</a>
+        </div>
+      </div>
+  </div>
+
+  <div class="MainContent" fxFlex="70">
+    <div class="SearchInput">
+      <img src="../../../assets/Icons/Search.png" class="SearchIcon" *ngIf="searchValue == ''">
+      <input type="search" placeholder="Search" [(ngModel)]="searchValue">
+    </div>
+
+    <div class="PostDiv">
+      <ul>
+        <li>
+          <div>
+            <mat-form-field style="width: 880px; border:2px solid white; font-size: 32px; height: auto;">
+              <mat-label style="color: white;">Leave a comment</mat-label>
+              <textarea matInput placeholder="Ex. It makes me feel..." style="color: white;" [(ngModel)]="leaveAComment"></textarea>
+              
+            </mat-form-field>            
+            <button class="PostButton" [disabled]="leaveAComment == '' ? true : false" (click)="postMessage()">Post</button>
+          </div>
+        </li>
+        <li *ngFor="let post of postList.reverse()" class="Post">
+            Annonymous:  {{post.message}}
+        </li>        
+      </ul>
+    </div>
+
+
+  </div>
+</div>
